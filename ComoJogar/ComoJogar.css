@@ -34,10 +34,12 @@ header nav ul li{
   margin: 15px;
 }
 
-header nav ul li a{
+
+header nav ul li a {
   text-decoration: none;
   color: #FFF;
-  font-weight: 800;
+  font-family: Raleway;
+  font-weight: 500;
   font-size: 20px;
   transition: 0.5s;
   display: inline-block;
@@ -63,14 +65,20 @@ ul img{
   position: absolute;
   color: #FFF;
   top: 10%;
-  left: 20%;
+  left: 40%;
   font-size: clamp(25px, 5vw, 60px);
   font-family: Playfair;
   font-weight: 800;
   text-shadow: 0 3px 6px rgba(0,0,0,0.7);
 
 }
-
+iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  margin-top: 12%;
+  margin-left: 32%;
+}
 .botao {
   top: 50%;
   left: 10.5%;
