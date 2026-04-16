@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .light {
   background-color: white;
   color: black;
@@ -6,23 +10,24 @@
 .light header,
 .light footer {
   background-color: #f2f2f2;
+}
+
+.light footer p {
   color: black;
 }
 
-body {
-  margin: 0;
+.light header nav ul li a {
+  color: black;
 }
 
 header {
   position: fixed;
-  display: inline-block;
   width: 100%;
   background-color: black;
   top: 0;
   padding: 10px;
   box-sizing: border-box;
   height: 100px;
-  align-items: center;
   z-index: 999;
 }
 
@@ -43,28 +48,24 @@ header nav ul li {
 
 header nav ul li a {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
   font-family: Raleway;
   font-weight: 500;
   font-size: 20px;
   transition: 0.5s;
-  display: inline-block;
 }
 
 header nav ul li a:hover {
-  color: #F00;
+  color: #f00;
   transform: scale(1.2);
 }
 
 header img {
-  width: 200px;
+  width: clamp(140px, 18vw, 200px);
+  height: auto;
   margin-top: 15px;
   margin-left: 65px;
-}
-
-ul img {
-  justify-content: right;
-  margin-right: 350px;
+  object-fit: contain;
 }
 
 .fundo {
@@ -76,18 +77,14 @@ ul img {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
   width: 100%;
   height: 200px;
   background: linear-gradient(transparent, black);
-
 }
-
 
 .fundo picture img {
   margin-top: 100px;
   width: 100%;
-  height: 100%;
   display: block;
 }
 
@@ -100,7 +97,6 @@ ul img {
   font-family: Playfair;
   font-weight: 800;
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);
-
 }
 
 .titulo span {
@@ -121,13 +117,11 @@ ul img {
   top: 50%;
   left: 10.5%;
   transform: translate(-50%, -50%);
-
   color: white;
   font-size: 35px;
   font-family: Roboto;
   font-weight: 800;
   text-decoration: none;
-
   background-color: #b00b19;
   padding: 12px 30px;
   border-radius: 8px;
@@ -153,17 +147,14 @@ ul img {
 
 footer {
   background-color: black;
-  margin: 0;
   padding: 50px 0;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 footer p {
-  color: #FFF;
+  color: #fff;
   font-size: 16px;
   font-family: Raleway;
 }
@@ -202,7 +193,6 @@ footer a {
   padding: 30px;
   border-radius: 10px;
   text-align: center;
-  z-index: 10000;
 }
 
 #ageGate input {
@@ -215,24 +205,28 @@ footer a {
 .blur {
   filter: blur(8px);
 }
+
 .card-jogo {
   display: none;
 }
 
 @media (max-width: 480px) {
+  .light header nav ul.active {
+    background-color: #fff;
+  }
+
+  .light .menu-toggle {
+    color: black;
+  }
 
   header {
     height: auto;
-    padding: 10px;
     text-align: center;
   }
 
   header img {
-    width: 200px;
-    margin: 0 auto;
-    display: block;
-    margin-top: 21px;
-    margin-left: 50px;
+    width: min(200px, 45vw);
+    margin-right: 50%;
   }
 
   header nav {
@@ -241,13 +235,21 @@ footer a {
   }
 
   header nav ul {
-    padding: 0;
     margin: 10px 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease;
+    background: black;
+  }
+
+  header nav ul.active {
+    max-height: 300px;
   }
 
   header nav ul li {
     display: block;
-    margin: 10px 0;
+    margin: 15px 0;
+    text-align: center;
   }
 
   header nav ul li a {
@@ -256,7 +258,6 @@ footer a {
 
   .fundo img {
     margin-top: 140px;
-    height: auto;
   }
 
   .titulo {
@@ -274,7 +275,6 @@ footer a {
   .botao {
     font-size: 25px;
     padding: 10px 20px;
-    top: 50%;
     left: 30%;
   }
 
@@ -283,8 +283,8 @@ footer a {
   }
 
   footer p {
-    text-align: center;
     font-size: 14px;
+    text-align: center;
   }
 
   .icones {
@@ -293,28 +293,11 @@ footer a {
 
   .menu-toggle {
     display: block;
-  }
-
-  header nav ul {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.8s ease;
-    background: black;
-  }
-
-  header nav ul.active {
-    max-height: 300px;
-  }
-
-  header nav ul li {
-    display: block;
-    margin: 15px 0;
-    text-align: center;
+    margin-top: 2%;
+    margin-right: 15%;
   }
 
   .fundo picture img {
     margin-top: 111px;
   }
-
-
 }

@@ -1,0 +1,47 @@
+.tema-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+#btnTema {
+  border: 1px solid #b00b19;
+  background-color: #b00b19;
+  color: #fff;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btnTema:hover {
+  background-color: #ff1a2f;
+  border-color: #ff1a2f;
+  transform: scale(1.05);
+}
+
+body.light #btnTema {
+  background-color: #1f1f1f;
+  border-color: #1f1f1f;
+  color: #fff;
+}
+
+body.light #btnTema:hover {
+  background-color: #444;
+  border-color: #444;
+}
+
+@media (max-width: 480px) {
+  .tema-item {
+    display: block;
+    text-align: center;
+  }
+
+  #btnTema {
+    width: 100%;
+    max-width: 220px;
+    font-size: 16px;
+  }
+}

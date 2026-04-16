@@ -1,29 +1,56 @@
-.light {
-  background-color: white;
-  color: black;
-}
-
-.light header,
-.light footer {
-  background-color: #f2f2f2;
-  color: black;
-}
-
 body {
   margin: 0;
-  background-color: black;
+  background-color: #791015;
+}
+
+body.light {
+  background-color: #d8404d;
+  color: black;
+}
+
+body.light header,
+body.light footer {
+  background-color: #f2f2f2;
+}
+
+body.light footer p {
+  color: black;
+}
+
+body.light header nav ul li a {
+  color: #111111;
+}
+
+body.light header nav ul li a:hover {
+  color: #b00b19;
+}
+
+body.light .subtitulo,
+body.light .euu,
+body.light .euuu {
+  color: #fff;
+}
+
+body.light .card {
+  background: rgba(0, 0, 0, 0.595);
+}
+
+body.light .card p {
+  color: #fff;
+}
+
+body.light .eu {
+  background-color: rgba(0, 0, 0, 0.595);
 }
 
 header {
   position: fixed;
-  display: inline-block;
   width: 100%;
   background-color: black;
   top: 0;
   padding: 10px;
   box-sizing: border-box;
   height: 100px;
-  align-items: center;
   z-index: 999;
 }
 
@@ -44,86 +71,53 @@ header nav ul li {
 
 header nav ul li a {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
   font-family: Raleway;
-  font-weight: 500;
   font-size: 20px;
   transition: 0.5s;
-  display: inline-block;
 }
 
 header nav ul li a:hover {
-  color: #F00;
+  color: #f00;
   transform: scale(1.2);
 }
 
 header img {
-  width: 200px;
+  width: clamp(140px, 18vw, 200px);
+  height: auto;
   margin-top: 15px;
   margin-left: 65px;
 }
 
-ul img {
-  justify-content: right;
-  margin-right: 350px;
-}
-
-.fundo {
-  position: relative;
-  width: 100%;
-}
-
-.fundo::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 200px;
-  background: linear-gradient(transparent, black);
-
-}
-
-
-.fundo picture img {
-  margin-top: 100px;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
 .titulo {
-  position: absolute;
-  top: 0;
-  left: 32%;
   font-size: 100px;
   color: #f6d4dc;
   font-family: Playfair;
   font-weight: 800;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* SUBTÍTULO */
 .subtitulo {
-  position: absolute;
-  top: 21%;
-  left: 27%;
-  color: black;
+  color: #f1f1f1;
   font-size: 20px;
   max-width: 700px;
   font-family: Roboto;
   font-weight: 600;
+  text-align: center;
+  margin: 5px auto;
+  padding: 20px;
 }
 
-/* CARDS */
 .cards {
-  position: absolute;
-  top: 53%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 40px auto;
+  padding: 20px;
 }
 
 .card {
@@ -143,14 +137,44 @@ ul img {
   color: white;
   text-align: center;
   font-size: 30px;
+  margin: 0;
 }
 
-/* DESENVOLVEDORA */
-.eu {
+#conteudo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.botao {
   position: absolute;
-  bottom: 100px;
-  width: 100%;
-  text-align: center;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 35px;
+  font-family: Roboto;
+  font-weight: 800;
+  text-decoration: none;
+  background-color: #ff1a2f;
+  padding: 12px 30px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background-color: #b00b19;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.eu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 150px 0 40px;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
 }
 
 .euu {
@@ -159,9 +183,15 @@ ul img {
 }
 
 .euuu {
-  color: #ddd;
+  color: white;
   max-width: 500px;
   margin: 10px auto;
+  background-color: rgba(246, 212, 220, 0.15);
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: center;
 }
 
 .foto {
@@ -186,17 +216,14 @@ ul img {
 
 footer {
   background-color: black;
-  margin: 0;
   padding: 50px 0;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 footer p {
-  color: #FFF;
+  color: #fff;
   font-size: 16px;
   font-family: Raleway;
 }
@@ -218,19 +245,22 @@ footer a {
 }
 
 @media (max-width: 480px) {
+  .light header nav ul.active {
+    background-color: #fff;
+  }
+
+  .light .menu-toggle {
+    color: black;
+  }
 
   header {
     height: auto;
-    padding: 10px;
     text-align: center;
   }
 
   header img {
-    width: 300px;
-    margin: 0 auto;
-    display: block;
-    margin-top: 21px;
-    margin-left: 30%;
+    width: min(200px, 45vw);
+    margin-right: 30%;
   }
 
   header nav {
@@ -241,62 +271,6 @@ footer a {
   header nav ul {
     padding: 0;
     margin: 10px 0;
-  }
-
-  header nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
-
-  header nav ul li a {
-    font-size: 18px;
-  }
-
-  .fundo img {
-    margin-top: 140px;
-    height: auto;
-  }
-
-  .titulo {
-    font-size: 45px;
-    top: 17%;
-    left: 15%;
-  }
-
-  .subtitulo {
-    font-size: 18px;
-    top: 35%;
-    left: 15%;
-  }
-
-  .botao {
-    font-size: 25px;
-    padding: 10px 20px;
-    top: 50%;
-    left: 30%;
-  }
-
-  footer {
-    padding: 30px 10px;
-  }
-
-  footer p {
-    text-align: center;
-    font-size: 14px;
-  }
-
-  .icones {
-    gap: 10px;
-  }
-
-  .menu-toggle {
-    display: block;
-    margin-top: 4%;
-    margin-right: 10%;
-    font-size: 40px;
-  }
-
-  header nav ul {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.8s ease;
@@ -313,9 +287,51 @@ footer a {
     text-align: center;
   }
 
-  .fundo picture img {
-    margin-top: 111px;
+  header nav ul li a {
+    font-size: 18px;
   }
 
+  .fundo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .titulo {
+    font-size: 45px;
+    margin-top: 10%;
+  }
+
+  .subtitulo {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .botao {
+    display: block;
+    margin: 20px auto;
+    font-size: 25px;
+    padding: 10px 20px;
+    margin-top: 50%;
+  }
+
+  footer {
+    padding: 30px 10px;
+  }
+
+  footer p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .icones {
+    gap: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-top: 4%;
+    margin-right: 15%;
+    font-size: 40px;
+  }
 }

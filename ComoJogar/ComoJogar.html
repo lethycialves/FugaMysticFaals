@@ -6,89 +6,73 @@
   <link rel="icon" href="../assets/img/icone.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fuga em Mystic Falls</title>
+
   <link rel="stylesheet" href="ComoJogar.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-    rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../assets/css/tema-botao.css" <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Roboto:wght@300;700&family=Raleway:wght@400;600&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
 </head>
 
 <body>
-  <div id="conteudo">
-    <header>
-      <a class="imgTeste" href="index.html" title="Home">
-        <img src="../assets/img/logo.png" alt="logo" title="logo" />
-      </a>
-      <button class="menu-toggle">☰</button>
+  <header>
+    <a href="../index.html">
+      <img src="../assets/img/logo.png" alt="logo" />
+    </a>
 
-      <nav>
-        <ul>
-          <li>
-            <a href="../index.html" title="Início"> Início </a>
-          </li>
-          <li>
-            <a href="../sobre/sobre.html" title="Sobre">
-              Sobre
-            </a>
-          </li>
-          <li>
-            <a href="../contato/contato.html" title="Contato">
-              Contato
-            </a>
-          </li>
-          <li>
-            <a href="../ComoJogar/ComoJogar.html" title="Como Jogar">
-              Como Jogar
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <button class="menu-toggle">☰</button>
 
-    <div class="fundo">
-      <p class="titulo">
-        Como Jogar?
-      </p>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="../sobre/sobre.html">Sobre</a></li>
+        <li><a href="../contato/contato.html">Contato</a></li>
+        <li><a href="../ComoJogar/ComoJogar.html">Como Jogar</a></li>
+        <li><button id="btnTema">Tema Claro</button></li>
+      </ul>
+    </nav>
+  </header>
 
-      <a class="botao" href="../jogar/jogar.html"> JOGAR </a>
-    </div>
-    <iframe src="https://www.youtube.com/embed/SEU_ID_AQUI" title="YouTube video" allowfullscreen>
-    </iframe>
+  <div class="fundo">
+    <p class="titulo">Como Jogar?</p>
 
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+
+    <a class="botao" href="../jogo/JogoFugaMysticFalls (1)/index.html">JOGAR</a>
   </div>
+
   <footer>
     <p>Desenvolvido por Lethycia Alves</p>
     <div class="icones">
-      <a href="https://www.instagram.com/" title="instagram">
-        <i class="fa-brands fa-instagram" style="color: white;"></i>
-      </a>
-
-      <a href="http://wa.me/5544999900604" title="Whatsapp">
-        <i class="fa-brands fa-whatsapp" style="color: white;"></i>
-      </a>
-
-      <a href="https://www.linkedin.com/in/lethycia-alves-7a9a093aa?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
-        style="color: white;" title="Linkedin">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
+      <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+      <a href="http://wa.me/5544999900604"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
     </div>
   </footer>
+
   <script>
     const btn = document.querySelector(".menu-toggle");
     const menu = document.querySelector("nav ul");
 
     btn.addEventListener("click", () => {
       menu.classList.toggle("active");
+    });
+
+    const botaoTema = document.getElementById("btnTema");
+
+    botaoTema.addEventListener("click", () => {
+      document.body.classList.toggle("light");
+
+      if (document.body.classList.contains("light")) {
+        botaoTema.textContent = "Tema Escuro";
+      } else {
+        botaoTema.textContent = "Tema Claro";
+      }
     });
   </script>
 </body>

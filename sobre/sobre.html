@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fuga em Mystic Falls</title>
   <link rel="stylesheet" href="../sobre/sobre.css" />
+  <link rel="stylesheet" href="../assets/css/menu-toggle.css" />
+  <link rel="stylesheet" href="../assets/css/tema-botao.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet" />
@@ -24,22 +26,20 @@
       </a>
 
       <button class="menu-toggle">☰</button>
-      <button id="btnTema" onclick="alternarTema()">Tema Claro</button>
       <nav>
         <ul>
           <li><a href="../index.html">Início</a></li>
           <li><a href="../sobre/sobre.html">Sobre</a></li>
           <li><a href="../contato/contato.html">Contato</a></li>
           <li><a href="../ComoJogar/ComoJogar.html">Como Jogar</a></li>
+          <li class="tema-item">
+            <button id="btnTema" onclick="alternarTema()">Tema Claro</button>
+          </li>
         </ul>
       </nav>
     </header>
 
     <div class="fundo">
-      <picture>
-        <source media="(max-width: 480px)" srcset="../assets/img/fundoPagCel.png" />
-        <img src="../assets/img/fundoPag.png" alt="Imagem de Fundo" />
-      </picture>
       <p class="titulo">
         Sobre o jogo
       </p>
@@ -65,20 +65,18 @@
           <p>Personagem estilizado (Vampiro)</p>
         </div>
       </div>
+      <a class="botao" href="../jogo/JogoFugaMysticFalls (1)/index.html" target="_blank">
+        JOGAR
+      </a>
 
       <div class="eu">
-        <!-- <img src="../assets/img/eu.jpeg" alt="Desenvolvedora Lethycia Alves" title="Desenvolvedora Lethycia Alves">-->
         <p class="euu">Desenvolvedora</p>
         <img class="foto" src="../assets/img/eu.jpeg" title="Lethycia Alves" alt="Lethycia Alves">
         <p class="euuu">Desenvolvido por Lethycia Alves, 18 anos, estudante de Análise e Desenvolvimento de Sistemas na
           Faculdade Integrado.</p>
       </div>
-      <!--<a class="botao" href="../jogar/jogar.html"> JOGAR </a>-->
     </div>
   </div>
-
-  </div>
-
   <footer>
     <p>Desenvolvido por Lethycia Alves</p>
 
@@ -106,7 +104,6 @@
     });
   </script>
   <script src="../assets/js/tema.js"></script>
-
 
 </body>
 

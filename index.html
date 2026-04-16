@@ -6,17 +6,22 @@
   <link rel="icon" href="assets/img/icone.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fuga em Mystic Falls</title>
+
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/menu-toggle.css" />
+  <link rel="stylesheet" href="assets/css/tema-botao.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
-
   <div id="ageGate">
     <div class="box">
       <h2>Verificação de Idade</h2>
@@ -27,20 +32,22 @@
   </div>
 
   <div id="conteudo">
-
     <header>
       <a class="img" href="index.html" title="Home">
         <img src="assets/img/logo.png" alt="logo" />
       </a>
 
       <button class="menu-toggle">☰</button>
-      <button id="btnTema" onclick="alternarTema()">Tema Claro</button>
+
       <nav>
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="sobre/sobre.html">Sobre</a></li>
           <li><a href="contato/contato.html">Contato</a></li>
           <li><a href="ComoJogar/ComoJogar.html">Como Jogar</a></li>
+          <li class="tema-item">
+            <button id="btnTema" onclick="alternarTema()">Tema Claro</button>
+          </li>
         </ul>
       </nav>
     </header>
@@ -53,25 +60,26 @@
 
       <p class="titulo">
         Fuga em <br />
-        <span> Mystic Falls</span>
+        <span>Mystic Falls</span>
       </p>
 
       <p class="subtitulo">
         Corra, pule e escape da floresta <br />
         misteriosa no jogo de aventura!
       </p>
-      <a class="botao" href="jogo/index.html" target="_blank">JOGAR</a>
+
+      <a class="botao" href="jogo/JogoFugaMysticFalls (1)/index.html" target="_blank">
+        JOGAR
+      </a>
 
       <div class="card-jogo">
         <h2 id="titulo-site"></h2>
-
         <p>Dev: <span id="info-dev"></span></p>
         <p>Gênero: <span id="info-gen"></span></p>
         <p>Plataforma: <span id="info-plat"></span></p>
         <p>Preço: <span id="info-preco"></span></p>
       </div>
     </div>
-
   </div>
 
   <footer>
@@ -79,15 +87,15 @@
 
     <div class="icones">
       <a href="https://www.instagram.com/">
-        <i class="fa-brands fa-instagram" style="color: white;"></i>
+        <i class="fa-brands fa-instagram" style="color: white"></i>
       </a>
 
       <a href="http://wa.me/5544999900604">
-        <i class="fa-brands fa-whatsapp" style="color: white;"></i>
+        <i class="fa-brands fa-whatsapp" style="color: white"></i>
       </a>
 
       <a href="https://www.linkedin.com/">
-        <i class="fa-brands fa-linkedin" style="color: white;"></i>
+        <i class="fa-brands fa-linkedin" style="color: white"></i>
       </a>
     </div>
   </footer>
@@ -105,7 +113,6 @@
   <script src="assets/js/tema.js"></script>
   <script src="assets/js/lancamento.js"></script>
   <script src="assets/js/variaveis.js"></script>
-
 </body>
 
 </html>

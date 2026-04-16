@@ -6,84 +6,100 @@ body {
   background-color: #791015;
 }
 
-header{
+body.light {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+body.light header,
+body.light footer {
+  background-color: #f2f2f2;
+}
+
+body.light header nav ul li a {
+  color: #111111;
+}
+
+body.light header nav ul li a:hover {
+  color: #b00b19;
+}
+
+body.light .titulo {
+  color: #111111;
+  text-shadow: none;
+}
+
+body.light footer p {
+  color: #111111;
+}
+
+header {
   position: fixed;
-  display: inline-block;
   width: 100%;
   background-color: black;
   top: 0;
   padding: 10px;
   box-sizing: border-box;
   height: 100px;
-  align-items: center;
-   z-index: 999;
+  z-index: 999;
 }
 
-header nav{
+header nav {
   float: right;
   margin-right: 55px;
 }
 
-header nav ul{
+header nav ul {
   list-style: none;
   margin-right: 80px;
 }
 
-header nav ul li{
+header nav ul li {
   display: inline-block;
   margin: 15px;
 }
 
-
 header nav ul li a {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
   font-family: Raleway;
-  font-weight: 500;
   font-size: 20px;
   transition: 0.5s;
-  display: inline-block;
 }
 
-header nav ul li a:hover{
-  color: #F00;
+header nav ul li a:hover {
+  color: #f00;
   transform: scale(1.2);
 }
 
 header img {
-  width: 200px;
+  width: clamp(140px, 18vw, 200px);
+  height: auto;
   margin-top: 15px;
   margin-left: 65px;
 }
 
-ul img{
-  justify-content: right;
-  margin-right: 350px;
-}
-
-.titulo{
+.titulo {
   position: absolute;
-  color: #FFF;
+  color: #fff;
   top: 10%;
   left: 20%;
   font-size: clamp(25px, 5vw, 60px);
   font-family: Playfair;
   font-weight: 800;
-  text-shadow: 0 3px 6px rgba(0,0,0,0.7);
-
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);
 }
 
 .botao {
+  position: absolute;
   top: 50%;
   left: 10.5%;
   transform: translate(-50%, -50%);
-
   color: white;
   font-size: 35px;
   font-family: Roboto;
   font-weight: 800;
   text-decoration: none;
-
   background-color: #b00b19;
   padding: 12px 30px;
   border-radius: 8px;
@@ -95,7 +111,7 @@ ul img{
   transform: translate(-50%, -50%) scale(1.1);
 }
 
-.menu-toggle{
+.menu-toggle {
   display: none;
   font-size: 30px;
   color: white;
@@ -111,15 +127,13 @@ footer {
   margin-top: auto;
   background-color: black;
   padding: 10px 0;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 footer p {
-  color: #FFF;
+  color: #fff;
   font-size: 16px;
   font-family: Raleway;
 }
@@ -140,86 +154,74 @@ footer a {
   display: flex;
 }
 
-@media (max-width: 480px){
-
-  header{
+@media (max-width: 480px) {
+  header {
     height: auto;
     padding: 10px;
     text-align: center;
   }
 
-  header img{
-    width: 140px;
-    height: 50px;
-    margin: 0 auto;
+  header img {
+    width: min(160px, 45vw);
+    margin: 10px auto 0;
     display: block;
-    margin-top: 21px;
   }
 
-  header nav{
+  header nav {
     float: none;
     margin: 0;
   }
 
-  header nav ul{
+  header nav ul {
     padding: 0;
     margin: 10px 0;
-  }
-
-  header nav ul li{
-    display: block;
-    margin: 10px 0;
-  }
-
-  header nav ul li a{
-    font-size: 18px;
-  }
-
-  .titulo{
-    font-size: 40px;
-    top: 10%;
-    left: 5%;
-  }
-
-  .botao{
-    font-size: 20px;
-    padding: 10px 20px;
-    top: 60%;
-    left: 50%;
-  }
-
-  footer{
-    padding: 30px 10px;
-  }
-
-  footer p{
-    text-align: center;
-    font-size: 14px;
-  }
-
-  .icones{
-    gap: 10px;
-  }
-
-    .menu-toggle{
-    display: block;
-  }
-
-  header nav ul{
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.8s ease;
     background: black;
   }
 
-  header nav ul.active{
-    max-height: 300px; 
+  header nav ul.active {
+    max-height: 300px;
   }
 
-  header nav ul li{
+  header nav ul li {
     display: block;
     margin: 15px 0;
     text-align: center;
   }
 
+  header nav ul li a {
+    font-size: 18px;
+  }
+
+  .titulo {
+    font-size: 40px;
+    top: 10%;
+    left: 5%;
+  }
+
+  .botao {
+    font-size: 20px;
+    padding: 10px 20px;
+    top: 60%;
+    left: 50%;
+  }
+
+  footer {
+    padding: 30px 10px;
+  }
+
+  footer p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .icones {
+    gap: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
